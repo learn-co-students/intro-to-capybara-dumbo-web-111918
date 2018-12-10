@@ -1,6 +1,6 @@
 # Load RSpec and Capybara
 require 'rspec'
-require 'capybara/rspec'
+require 'capybara/rspec' # for integration tests in rails and sinatra
 require 'capybara/dsl'
 
 # Configure RSpec
@@ -17,4 +17,4 @@ def app
 end
 
 # Configure Capybara to test against the application above.
-Capybara.app = app
+Capybara.app = app # WE TELL CAPYBARA that the app we're testing against is defined in config.ru
